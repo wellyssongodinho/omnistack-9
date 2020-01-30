@@ -48,6 +48,6 @@ app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 ;
-server.listen(port || 8080, hostname || '0.0.0.0', () => {
+server.listen(port || 8080, hostname || '127.0.0.1', () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
