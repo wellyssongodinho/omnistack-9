@@ -1,3 +1,8 @@
+require('dotenv').config();
+
+const hostname = process.env.SERVER_HOST;
+const port = process.env.SERVER_PORT;
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -42,5 +47,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
-
-server.listen(8080 || 5000);
+;
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
