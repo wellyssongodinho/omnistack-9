@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
+require('dotenv').config();
+
 
 export default function Login({ history }) {
   const [email, setEmail] = useState('');
@@ -7,6 +9,7 @@ export default function Login({ history }) {
   async function handleSubmit(event) {
     event.preventDefault();
 
+    console.log (process.env.REACT_APP_BASE_URL);
     const response = await api.post('/sessions', { email });
 
     const { _id } = response.data;
