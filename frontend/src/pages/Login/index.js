@@ -9,7 +9,6 @@ export default function Login({ history }) {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    console.log (process.env.REACT_APP_BASE_URL);
     const response = await api.post('/sessions', { email });
 
     const { _id } = response.data;

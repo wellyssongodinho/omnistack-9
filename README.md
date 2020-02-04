@@ -73,3 +73,43 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 ---
 
 Feito com ♥ by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+
+
+## :heroku: commands
+
+- Instalar Heroku:
+npm install -g heroku
+
+- Verificar versão instalada:
+heroku --version
+
+- Logar no Heroku (Browser):
+heroku login
+
+- Logar no Heroku (Credenciais): 
+heroku login -i
+
+- Criar seu primeiro Heroku:
+cd ~/myapp
+heroku create
+
+
+- Subir subpasta para Heroku: 
+git subtree push --prefix=backend heroku master
+
+- Ver log da última versão deployada:
+heroku logs --tail 
+
+- Definir variáveis de ambiente
+heroku config:set PORT=<PORT>
+heroku config:set HOST=<HOST SERVER>
+heroku config:set DB_CONN="<STRING CONNECTION>"
+
+- Ver arquivos e estruturas de pastas Heroku app:
+$ heroku run bash --app <appName>
+~$ pwd
+~$ ls
+~$ cd <path to images folder>
+
+- Outros comandos Heroku Cli:
+[heroku-cli-commands](https://devcenter.heroku.com/articles/heroku-cli-commands)
