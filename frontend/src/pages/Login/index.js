@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
-require('dotenv').config();
-
 
 export default function Login({ history }) {
   const [email, setEmail] = useState('');

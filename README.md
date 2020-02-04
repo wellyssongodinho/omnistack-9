@@ -94,6 +94,9 @@ cd ~/myapp
 heroku create
 
 
+-- Verificar aplicações Heroku:
+heroku apps
+
 - Subir subpasta para Heroku: 
 git subtree push --prefix=backend heroku master
 

@@ -16,7 +16,7 @@ const SpotSchema = new mongoose.Schema({
 });
 
 SpotSchema.virtual('thumbnail_url').get(function() {
-  return `${process.env.HOST}/files/${this.thumbnail}`
+  return `${process.env.HOST_HEROKU}/files/${this.thumbnail}`
 })
 
 module.exports = mongoose.model('Spot', SpotSchema);
